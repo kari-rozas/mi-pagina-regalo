@@ -1,0 +1,108 @@
+/* Estilos generales del Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro con mayor opacidad */
+  padding: 20px 30px; /* Mayor espacio */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; /* Asegura que el Navbar esté encima de otros elementos */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  transition: background-color 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Logo o nombre del sitio */
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f8c8d2; /* Color suave y romántico */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-logo a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Hover en el logo */
+.navbar-logo:hover {
+  color: #f6a7b3; /* Color suave en hover */
+}
+
+/* Enlaces del menú */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+}
+
+.nav-links li {
+  font-size: 1.1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out, transform 0.3s ease; /* Transición suave */
+}
+
+/* Hover para los enlaces */
+.nav-links a:hover {
+  color: #f8c8d2; /* Color del hover */
+  transform: scale(1.1); /* Aumento de tamaño con hover */
+}
+
+/* Menú responsivo: se muestra como una lista vertical cuando el menú está abierto */
+.nav-links.active {
+  display: block;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 2px solid #f8c8d2; /* Línea superior para dar contraste */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Sombra adicional cuando el menú está activo */
+}
+
+.nav-links li {
+  margin-bottom: 20px; /* Espaciado mayor entre los enlaces */
+}
+
+/* Estilos del icono de menú (hamburguesa) */
+.menu-icon {
+  display: none;
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out; /* Transición suave en color */
+}
+
+/* Hover en el icono de menú */
+.menu-icon:hover {
+  color: #f8c8d2; /* Color suave en hover */
+}
+
+/* Estilo responsivo: el icono de menú se muestra en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    padding: 20px 15px; /* Ajuste del padding en pantallas pequeñas */
+  }
+}
