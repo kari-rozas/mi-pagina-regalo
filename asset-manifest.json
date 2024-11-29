@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/mi-pagina-regalo/static/css/main.3786c4a1.css",
+    "main.js": "/mi-pagina-regalo/static/js/main.7bd5af1b.js",
+    "static/js/453.66f41a79.chunk.js": "/mi-pagina-regalo/static/js/453.66f41a79.chunk.js",
+    "static/media/cancion.mp3": "/mi-pagina-regalo/static/media/cancion.bbfce2787c6b41963f56.mp3",
+    "static/media/video.mp4": "/mi-pagina-regalo/static/media/video.1f789989a3f2053ad614.mp4",
+    "static/media/tu-imagen-de-fondo.jpeg": "/mi-pagina-regalo/static/media/tu-imagen-de-fondo.5f73a3493afe70c75d21.jpeg",
+    "static/media/imagen1.jpeg": "/mi-pagina-regalo/static/media/imagen1.1166a54864215fb1eea5.jpeg",
+    "static/media/imagen13.jpeg": "/mi-pagina-regalo/static/media/imagen13.44734c13630121b2c0a1.jpeg",
+    "static/media/imagen11.jpeg": "/mi-pagina-regalo/static/media/imagen11.252ccd93c88a265d4b29.jpeg",
+    "static/media/imagen3.jpeg": "/mi-pagina-regalo/static/media/imagen3.d918180a40ad3bc80296.jpeg",
+    "static/media/imagen10.jpeg": "/mi-pagina-regalo/static/media/imagen10.f9267eee8608893ad1fa.jpeg",
+    "static/media/imagen12.jpeg": "/mi-pagina-regalo/static/media/imagen12.d553aaefe189720c9683.jpeg",
+    "static/media/imagen9.jpeg": "/mi-pagina-regalo/static/media/imagen9.706aa9ad3a5cbe3c9854.jpeg",
+    "static/media/imagen4.jpeg": "/mi-pagina-regalo/static/media/imagen4.42dcb4bef43f9b92b2e9.jpeg",
+    "static/media/imagen2.jpeg": "/mi-pagina-regalo/static/media/imagen2.227268e4d5a118c42b8a.jpeg",
+    "static/media/imagen6.jpeg": "/mi-pagina-regalo/static/media/imagen6.6d005128937d9eb90916.jpeg",
+    "static/media/imagen7.jpeg": "/mi-pagina-regalo/static/media/imagen7.a7215b39e1d784484f2b.jpeg",
+    "static/media/imagen8.jpeg": "/mi-pagina-regalo/static/media/imagen8.47d09e96fc8dfbd3fdd9.jpeg",
+    "static/media/imagen5.jpeg": "/mi-pagina-regalo/static/media/imagen5.7b8914c9cfa15a2dcc8c.jpeg",
+    "index.html": "/mi-pagina-regalo/index.html",
+    "main.3786c4a1.css.map": "/mi-pagina-regalo/static/css/main.3786c4a1.css.map",
+    "main.7bd5af1b.js.map": "/mi-pagina-regalo/static/js/main.7bd5af1b.js.map",
+    "453.66f41a79.chunk.js.map": "/mi-pagina-regalo/static/js/453.66f41a79.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3786c4a1.css",
+    "static/js/main.7bd5af1b.js"
+  ]
+}
