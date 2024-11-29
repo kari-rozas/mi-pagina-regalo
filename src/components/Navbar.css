@@ -64,7 +64,7 @@
 .nav-links.active {
   display: block;
   position: absolute;
-  top: 70px;
+  top: 70px; /* Ajustar la distancia desde el navbar */
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.9);
@@ -95,7 +95,7 @@
 /* Estilo responsivo: el icono de menú se muestra en pantallas pequeñas */
 @media screen and (max-width: 768px) {
   .nav-links {
-    display: none;
+    display: none; /* Por defecto oculto */
   }
 
   .menu-icon {
@@ -104,5 +104,22 @@
 
   .navbar {
     padding: 20px 15px; /* Ajuste del padding en pantallas pequeñas */
+  }
+
+  /* Ajuste para el contenido cuando el menú está activo */
+  .navbar + .content {
+    margin-top: 120px;  /* Añadir un margen superior para evitar que el navbar lo tape */
+  }
+
+  .navbar .nav-links.active {
+    position: fixed;  /* Cambiar a fixed para que el menú se "pegue" debajo del navbar */
+    top: 80px;  /* Ajustar la posición para que no se superponga con el navbar */
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 2px solid #f8c8d2; /* Línea superior para dar contraste */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Sombra adicional cuando el menú está activo */
   }
 }

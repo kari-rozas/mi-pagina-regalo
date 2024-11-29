@@ -36,6 +36,7 @@ body::before {
   padding: 20px;
   position: relative;
   z-index: 1;
+  padding-top: 100px; /* Ajustar el espacio para el navbar */
 }
 
 /* Navbar */
@@ -77,6 +78,27 @@ nav {
   background-color: #ff4081;
 }
 
+/* Ajuste para el menú desplegado */
+nav ul {
+  display: none;
+}
+
+nav.active ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}
+
+nav.active .nav-links li {
+  margin: 5px 0;
+}
+
+nav.active .nav-links a {
+  font-size: 1.1rem; /* Reducir el tamaño del texto en el menú desplegado */
+  padding: 10px 15px;
+}
+
 /* Reproductor de música - Estilos mejorados */
 .audio-player {
   position: fixed; /* Fijado en la parte inferior */
@@ -98,142 +120,42 @@ nav {
 
 /* Responsividad para pantallas más pequeñas */
 @media (max-width: 768px) {
+  /* Ajuste del espacio superior para evitar que el navbar tape el contenido */
+  .App {
+    padding-top: 160px; /* Aumentar espacio en móviles */
+  }
+
+  /* Ajuste del navbar en pantallas pequeñas */
+  nav {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Asegura que el navbar sea más visible */
+  }
+
+  /* Reproductor de audio más ancho en móviles */
   .audio-player audio {
     width: 90%; /* Reproductor más ancho en móviles */
   }
-}
 
-/* Guía de mensajes */
-.guide-message {
-  text-align: center;
-  font-size: 1.2rem;
-  margin: 5% auto;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 15px;
-  border-radius: 10px;
-  width: 90%;
-}
-
-.guide-message p {
-  margin-bottom: 15px;
-}
-
-.guide-message a {
-  color: #ff4081;
-  text-decoration: none;
-}
-
-/* Contenedor de rutas */
-.routes-container {
-  margin-top: 150px;
-  text-align: center;
-}
-
-.routes-container h1 {
-  font-size: 2rem;
-  color: white;
-}
-
-.routes-container p {
-  font-size: 1rem;
-  color: white;
-  margin-top: 10px;
-}
-
-/* Carrusel */
-.carousel {
-  max-width: 90%;
-  margin: 20px auto;
-}
-
-.carousel-image {
-  width: 100%;
-  max-height: 300px;
-  border-radius: 10px;
-  transition: transform 0.5s ease-in-out;
-  object-fit: cover;
-}
-
-.carousel-image:hover {
-  transform: scale(1.05);
-}
-
-.caption {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  font-size: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-  white-space: pre-line;
-}
-
-.carousel-controls {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-}
-
-.carousel-prev,
-.carousel-next {
-  background-color: #ff4081;
-  border: none;
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
-}
-
-.carousel-prev:hover,
-.carousel-next:hover {
-  background-color: #e91e63;
-}
-
-/* Mensaje de bienvenida */
-.welcome-message {
-  position: absolute;
-  top: 150px;
-  z-index: 10;
-  text-align: center;
-  font-size: 1.5rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  border-radius: 10px;
-  width: 90%;
-}
-
-.welcome-message a {
-  color: #ff4081;
-  text-decoration: none;
-}
-
-.welcome-message a:hover {
-  text-decoration: underline;
-}
-
-/* Media queries para pantallas pequeñas */
-@media (max-width: 768px) {
+  /* Ajuste de enlaces de navegación */
   .nav-links {
     flex-direction: column;
     align-items: center;
+    font-size: 16px; /* Reducción del tamaño de fuente en pantallas pequeñas */
   }
 
   .nav-links li {
     margin: 10px 0;
   }
 
+  /* Ajuste de márgenes para que el contenido no quede tapado por el navbar */
+  .routes-container {
+    margin-top: 200px; /* Aumenta el margen superior en móviles */
+  }
+
+  /* Ajuste de texto y márgenes en móviles */
   .guide-message {
     font-size: 1rem;
+    padding: 15px;
   }
 
   .routes-container h1 {
@@ -251,4 +173,129 @@ nav {
   .floating-player audio {
     width: 90%;
   }
+
+  /* Mejores márgenes y adaptabilidad para texto en móviles */
+  .welcome-message {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+
+  .carousel-prev,
+  .carousel-next {
+    width: 35px;
+    height: 35px;
+    font-size: 18px; /* Botones más pequeños en móviles */
+  }
+
+  .carousel-image {
+    max-height: 250px; /* Ajuste de altura de la imagen */
+  }
+}
+
+/* Guía de mensajes */
+.guide-message {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 5% auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  color: #ff4081;
+  width: 90%;
+  max-width: 500px;
+}
+
+/* Estilo del componente de las rutas */
+.routes-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.routes-container h1 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.routes-container p {
+  font-size: 1rem;
+  color: white;
+  line-height: 1.6;
+}
+
+/* Carrusel de imágenes */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transform: translateY(-50%);
+  padding: 0 20px;
+}
+
+.carousel-prev, .carousel-next {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+  background-color: #ff4081;
+}
+
+/* Ajuste de los botones del carrusel en pantallas pequeñas */
+@media (max-width: 768px) {
+  .carousel-prev, .carousel-next {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .carousel-image {
+    max-height: 250px; /* Ajuste para pantallas más pequeñas */
+  }
+}
+
+/* Estilo para botones de acción flotantes */
+.floating-player {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.floating-player button {
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.floating-player button:hover {
+  transform: scale(1.1);
 }
