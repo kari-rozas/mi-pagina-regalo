@@ -18,7 +18,7 @@ function CuandoNosConocimos() {
         </p>
         <p>
           Fue tan fácil hablar contigo, tan natural, como si te hubiera
-          conocido desde siempre. No necesitaba sabir cómo lucías.
+          conocido desde siempre. No necesitaba saber cómo lucías.
           Y fue en ese preciso instante cuando comprendí que, sin quererlo, 
           te habías ganado mi corazón de una forma irrevocable.
         </p>
