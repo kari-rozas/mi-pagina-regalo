@@ -1,0 +1,110 @@
+/* Estilo general para el contenedor principal */
+.feliz-cumpleanos {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #f8bbd0, #fce4ec); /* Fondo degradado */
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Título */
+.feliz-cumpleanos h1 {
+  font-size: 3.5em;
+  color: #d81b60;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+  animation: fadeIn 1.5s ease-in-out; /* Animación de entrada */
+}
+
+/* Contenedor del contenido */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 1000px;
+}
+
+/* Estilo del video */
+.birthday-video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.birthday-video:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo del mensaje de cumpleaños */
+.birthday-message {
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #333;
+  padding: 0 10px;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: justify; /* Justificar el texto */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.birthday-message:hover {
+  transform: translateY(-5px); /* Elevar el mensaje al pasar el ratón */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .feliz-cumpleanos h1 {
+    font-size: 2.5em;
+  }
+
+  .birthday-video {
+    width: 90%;
+  }
+
+  .birthday-message {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .feliz-cumpleanos h1 {
+    font-size: 2em;
+  }
+
+  .birthday-message {
+    font-size: 1.1em;
+    padding: 20px;
+  }
+}
